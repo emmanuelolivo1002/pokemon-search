@@ -24,7 +24,9 @@ const PokemonTypeBadge = ({ type }) => {
     water: "bg-sky-500",
   };
 
-  return <div className={backgroundColor[type] + " rounded text-white uppercase px-2"}>{type}</div>;
+  return (
+    <div className={backgroundColor[type] + " rounded-xl text-white uppercase px-3"}>{type}</div>
+  );
 };
 
 const PokemonStatProgressBar = ({ statName, baseStat }) => {
@@ -87,14 +89,14 @@ function App() {
       <div className="mx-auto max-w-4xl px-4 my-10 ">
         {/* Pokemon Data */}
         <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-6 gap-2">
-          <div className="row-span-1 row-start-1 col-span-1 bg-white border-4 border-blue-400 py-2 px-4 rounded-lg flex items-center">
+          <div className="row-span-1 row-start-1 col-span-1 bg-white border-4 border-blue-400 shadow shadow-blue-300 py-2 px-4 rounded-lg flex items-center">
             <h3 className="text-xl uppercase font-bold">{pokemonData.name}</h3>
           </div>
-          <div className="row-span-1 row-start-1 col-span-1 bg-white border-4 border-blue-400  py-2 px-4 rounded-lg flex items-center">
+          <div className="row-span-1 row-start-1 col-span-1 bg-white border-4 border-blue-400 shadow shadow-blue-300  py-2 px-4 rounded-lg flex items-center">
             <h3 className="text-lg font-bold">#{pokemonData.id}</h3>
           </div>
 
-          <div className="row-start-2 row-span-4  col-span-2 bg-white border-4 border-blue-400 py-2 px-4 rounded-lg flex justify-center">
+          <div className="row-start-2 row-span-4  col-span-2 bg-white border-4 border-blue-400 shadow shadow-blue-300 py-2 px-4 rounded-lg flex justify-center">
             <img
               src={pokemonData.sprites.front_default}
               alt={pokemonData.name}
@@ -102,13 +104,13 @@ function App() {
             />
           </div>
 
-          <div className="row-start-6 row-span-1 col-start-1 col-span-2 bg-white border-4 border-blue-400  py-2 px-4 rounded-lg flex items-center justify-center gap-2">
+          <div className="row-start-6 row-span-1 col-start-1 col-span-2 bg-white border-4 border-blue-400 shadow shadow-blue-300  py-2 px-4 rounded-lg flex items-center justify-center gap-2">
             {pokemonData.types.map(({ type }) => (
               <PokemonTypeBadge type={type.name} />
             ))}
           </div>
 
-          <div className="col-span-2 md:row-start-2 md:row-span-full bg-white border-4 border-blue-400 py-2 px-4  rounded-lg ">
+          <div className="col-span-2 md:row-start-2 md:row-span-full bg-white border-4 border-blue-400 shadow shadow-blue-300 py-2 px-4  rounded-lg ">
             <h4 className="text-lg font-bold mb-4">Stats:</h4>
             {pokemonData.stats.map(({ base_stat, stat }) => (
               <PokemonStatProgressBar statName={stat.name} baseStat={base_stat} />
