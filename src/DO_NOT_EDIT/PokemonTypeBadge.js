@@ -1,4 +1,4 @@
-const PokemonTypeBadge = ({ type }) => {
+const PokemonTypeBadge = ({ typeName }) => {
   const backgroundColor = {
     bug: "bg-green-500",
     dark: "bg-stone-700",
@@ -21,7 +21,9 @@ const PokemonTypeBadge = ({ type }) => {
   };
 
   return (
-    <div className={backgroundColor[type] + " rounded-xl text-white uppercase px-3"}>{type}</div>
+    <div className={backgroundColor[typeName] + " rounded-xl text-white uppercase px-3"}>
+      {typeName}
+    </div>
   );
 };
 

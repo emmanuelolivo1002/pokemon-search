@@ -10,25 +10,17 @@ function App() {
       <div className="bg-blue-900 pb-8 pt-16">
         <Header />
         {/* Inputs */}
-        <div className="mx-auto max-w-4xl px-4 flex flex-col md:flex-row md:justify-between items-center  gap-3">
+        <div className="inputs">
           {/* Search Field and Button */}
-          <div className="flex w-full md:w-2/3 shadow-md">
-            <input
-              type="text"
-              className="border-yellow-500 border-2 p-2 w-full rounded-l-xl h-12 md:h-16"
-              placeholder="Type name or number (eg. Bulbasaur, 35)"
-            />
-            <button className="bg-yellow-500 text-white px-4 hover:bg-yellow-600 rounded-r-xl  uppercase font-bold">
-              Search
-            </button>
+          <div className="search-input">
+            <input type="text" placeholder="Type name or number (eg. Bulbasaur, 35)" />
+            <button>Search</button>
           </div>
 
-          <p className="text-white "> - OR - </p>
+          <p className="text-white"> - OR - </p>
 
           {/* Get Random Pokemon Button */}
-          <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-xl h-12 md:h-16 uppercase font-bold shadow-md">
-            Get Random
-          </button>
+          <button className="random-button">Get Random</button>
         </div>
       </div>
 
@@ -52,7 +44,7 @@ function App() {
 
           <div className="row-start-6 row-span-1 col-start-1 col-span-2 bg-white border-4 border-blue-400 shadow shadow-blue-300  py-2 px-4 rounded-lg flex items-center justify-center gap-2">
             {pokemonData.types.map(({ type }) => (
-              <PokemonTypeBadge type={type.name} />
+              <PokemonTypeBadge typeName={type.name} />
             ))}
           </div>
 
