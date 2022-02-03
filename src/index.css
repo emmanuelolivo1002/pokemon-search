@@ -1,3 +1,4 @@
+/* BASE STYLING - IGNORE  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,4 +19,12 @@
   .random-button {
     @apply bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-xl h-12 md:h-16 uppercase font-bold shadow-md;
   }
+  .data-container {
+    @apply mx-auto max-w-4xl px-4 my-10;
+  }
 }
+/* BASE STYLING - IGNORE  */
+
+/******************************************************************** */
+/******************* ADD YOUR CUSTOM STYLING HERE ******************* */
+/******************************************************************** */
