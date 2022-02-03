@@ -67,7 +67,7 @@ function App() {
         {/* Inputs */}
         <div className="mx-auto max-w-4xl px-4 flex flex-col md:flex-row md:justify-between items-center  gap-3">
           {/* Search Field and Button */}
-          <div className="flex w-full md:w-2/3">
+          <div className="flex w-full md:w-2/3 shadow-md">
             <input
               type="text"
               className="border-yellow-500 border-2 p-2 w-full rounded-l-xl h-12 md:h-16"
@@ -81,7 +81,7 @@ function App() {
           <p className="text-white "> - OR - </p>
 
           {/* Get Random Pokemon Button */}
-          <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-xl h-12 md:h-16 uppercase font-bold">
+          <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-xl h-12 md:h-16 uppercase font-bold shadow-md">
             Get Random
           </button>
         </div>
